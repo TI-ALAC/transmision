@@ -26,7 +26,7 @@ async function init() {
     content2.style.display = "none";
     content3.style.display = "none";
     content4.style.display = "block";
-  }, 6500);
+  }, 7000);
 }
 
 init();
