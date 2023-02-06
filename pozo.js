@@ -14,19 +14,19 @@ async function init() {
     content2.style.display = "block";
     content3.style.display = "none";
     content4.style.display = "none";
-  }, 1000);
+  }, 500);
   setTimeout(() => {
     content.style.display = "none";
     content2.style.display = "none";
     content3.style.display = "block";
     content4.style.display = "none";
-  }, 5500);
+  }, 5000);
   setTimeout(() => {
     content.style.display = "none";
     content2.style.display = "none";
     content3.style.display = "none";
     content4.style.display = "block";
-  }, 500);
+  }, 5500);
 }
 
 init();
