@@ -14,7 +14,7 @@ async function init() {
     content2.style.display = "block";
     content3.style.display = "none";
     content4.style.display = "none";
-  }, 3000);
+  }, 1000);
   setTimeout(() => {
     content.style.display = "none";
     content2.style.display = "none";
