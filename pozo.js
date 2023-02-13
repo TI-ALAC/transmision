@@ -20,13 +20,13 @@ async function init() {
     content2.style.display = "none";
     content3.style.display = "block";
     content4.style.display = "none";
-  }, 7000);
+  }, 700000);
   setTimeout(() => {
     content.style.display = "none";
     content2.style.display = "none";
     content3.style.display = "none";
     content4.style.display = "block";
-  }, 9000);
+  }, 900000);
 }
 
 init();
