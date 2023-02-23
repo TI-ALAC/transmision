@@ -14,7 +14,7 @@ async function init() {
     content2.style.display = "block";
     content3.style.display = "none";
     content4.style.display = "none";
-  }, 1500);
+  }, 2000);
   setTimeout(() => {
     content.style.display = "none";
     content2.style.display = "none";
@@ -26,7 +26,7 @@ async function init() {
     content2.style.display = "none";
     content3.style.display = "none";
     content4.style.display = "block";
-  }, 9000);
+  }, 8500);
 }
 
 init();
