@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <title>Backus</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Reproductor de Video de YouTube</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        .video-container {
+            position: relative;
+            width: 100vw;
+            max-width: 100%;
+            height: 0;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 </head>
-
 <body>
-    <main>
-        <div id="contenido2" class="content2">
-            
-            <iframe id="reproductor" class="videoLive"
-                src="https://www.youtube.com/embed/Pu4qA8Drc2A?autoplay=1&mute=1&controls=0"
-                frameborder="0" allow="autoplay; encrypted-media">
-            </iframe>
-        </div>
-    </main>
+    <div class="video-container">
+        <iframe id="youtube-player" src="https://www.youtube.com/embed/Pu4qA8Drc2A?enablejsapi=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    <script src="pozo.js"></script>
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+    </script>
 </body>
-
 </html>
