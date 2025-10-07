@@ -30,11 +30,41 @@
             height: 100%;
             border: 0;
         }
+
+        /* Responsive design for mobile devices */
+        @media screen and (max-width: 768px) {
+            .video-container {
+                width: 100vw;
+                height: 100vh;
+                padding-top: 0;
+            }
+            
+            .video-container iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .video-container {
+                width: 100vw;
+                height: 100vh;
+                padding-top: 0;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .video-container {
+                width: 100vw;
+                height: 100vh;
+                padding-top: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="video-container">
-<iframe id="youtube-player" src="https://www.youtube.com/embed/rQtz5rc4Jk4?enablejsapi=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="youtube-player" src="https://www.youtube.com/embed/SbLjxYMsJms?enablejsapi=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&autoplay=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <script>
         var tag = document.createElement('script');
